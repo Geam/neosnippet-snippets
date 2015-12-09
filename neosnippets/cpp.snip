@@ -39,16 +39,20 @@ abbr        class {}
 
 snippet     try
 abbr        try catch
-    try {
+    try
+    {
         ${1:#:TARGET}
-    } catch (${2:...}) {
+    }
+    catch (${2:...})
+    {
         ${3}
     }
 
 # range based for ( C++11 feature )
 snippet     for_CPP11
 abbr        for (:) {}
-    for (${1:auto&& }${2:var} : ${3:container}) {
+    for (${1:auto&& }${2:var} : ${3:container})
+    {
         ${0:TARGET}
     }
 
