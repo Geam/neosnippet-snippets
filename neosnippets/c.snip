@@ -85,7 +85,7 @@ abbr        func();
 snippet     struct
 alias       st
 abbr        struct {}
-	struct s_${1:`expand('%:r')`}
+	struct s_${1:`expand('%:t:r')`}
     {
 		${2:/* data */}
 	}${3: /* optional variable list */};${4}
@@ -97,7 +97,7 @@ abbr        typedef struct{};
 	typedef struct s_$1
     {
 		${2:/* data */}
-	} t_${1:`expand('%:r')`};
+	} t_${1:`expand('%:t:r')`};
 
 snippet     enum
 abbr        enum {}
@@ -129,7 +129,7 @@ alias   #inc, #include
 # #include "..."
 snippet inc2
 alias   Inc, #inc2, #include2
-    #include "${1:`expand('%:r')`}.h"${0}
+    #include "${1:`expand('%:t:r')`}.h"${0}
 
 snippet ifndef
 alias   #ifndef
